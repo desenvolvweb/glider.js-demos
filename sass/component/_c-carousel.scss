@@ -1,0 +1,65 @@
+$component-name: "c-carousel";
+
+.#{$component-name} {
+  $purple: #a89cc8;
+
+  margin-bottom: $global-module-size;
+  max-width: rem(600);
+
+  &--responsive {
+    max-width: 100%;
+  }
+
+  &__slides {
+    border: rem(2) solid $purple;
+
+    .#{$component-name}--thumbs & {
+      border: 0;
+    }
+  }
+
+  &__slide {
+    align-items: center;
+    color: var(--color-webfatorial-gray-2);
+    display: flex;
+    font-size: 200%;
+    justify-content: center;
+    padding: rem(50) 0;
+
+    .#{$component-name}--thumbs & {
+      padding: 0;
+    }
+
+    &:not(:first-child) {
+      border-left: rem(1) solid $purple;
+
+      .#{$component-name}--thumbs & {
+        border: 0;
+      }
+    }
+  }
+
+  &__thumbs {
+    display: flex;
+  }
+
+  &__thumb {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    height: rem(200);
+    width: rem(150);
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: z-index(default);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

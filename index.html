@@ -2,14 +2,99 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
-        <title>Basic Front Boilerplate</title>
+        <title>Glider.js demos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
         <link rel="stylesheet" href="sass/style.scss">
     </head>
 
     <body>
+        <h1>Glider.js: exemplos</h1>
+
+        <h2>Simples</h2>
+
+        <article class="c-carousel c-carousel--simple">
+          <div class="c-carousel__slides js-carousel--simple">
+            <article class="c-carousel__slide">1</article>
+            <article class="c-carousel__slide">2</article>
+            <article class="c-carousel__slide">3</article>
+            <article class="c-carousel__slide">4</article>
+            <article class="c-carousel__slide">5</article>
+            <article class="c-carousel__slide">6</article>
+          </div>
+
+          <button class="js-carousel--simple-prev" aria-label="Anterior">«</button>
+          <button class="js-carousel--simple-next" aria-label="Próximo">»</button>
+          <div class="js-carousel--simple-dots" role="tablist"></div>
+        </article>
+
+        <h2>Responsivo</h2>
+
+        <article class="c-carousel c-carousel--responsive">
+          <div class="c-carousel__slides js-carousel--responsive">
+            <article class="c-carousel__slide">1</article>
+            <article class="c-carousel__slide">2</article>
+            <article class="c-carousel__slide">3</article>
+            <article class="c-carousel__slide">4</article>
+            <article class="c-carousel__slide">5</article>
+            <article class="c-carousel__slide">6</article>
+          </div>
+
+          <button class="js-carousel--responsive-prev" aria-label="Anterior">«</button>
+          <button class="js-carousel--responsive-next" aria-label="Próximo">»</button>
+          <div class="js-carousel--responsive-dots" role="tablist"></div>
+        </article>
+
+        <h2>Miniaturas</h2>
+
+        <article class="c-carousel c-carousel--thumbs">
+          <div class="c-carousel__slides js-carousel--thumbs">
+            <article class="c-carousel__slide">
+              <img src="https://i.pinimg.com/originals/e9/14/62/e9146248b5ea4ad0dabebc8282b46cf4.jpg" height="300" alt="">
+            </article>
+
+            <article class="c-carousel__slide">
+              <img src="https://i.pinimg.com/originals/70/c3/f1/70c3f1f50a2aa3063fe9c4df0a248358.jpg" height="300" alt="">
+            </article>
+
+            <article class="c-carousel__slide">
+              <img src="https://i.pinimg.com/originals/92/a7/68/92a76833490c480b72674024b78d563d.jpg" height="300" alt="">
+            </article>
+
+            <article class="c-carousel__slide">
+              <img src="https://pixfeeds.com/images/14/393485/1200-57958830-redhead-girl-with-brown-lipstick.jpg" height="300" alt="">
+            </article>
+          </div>
+
+          <div class="c-carousel__thumbs">
+            <button
+              class="c-carousel__thumb"
+              data-carousel-index="0"
+              style="background-image:url(https://i.pinimg.com/originals/e9/14/62/e9146248b5ea4ad0dabebc8282b46cf4.jpg)">
+            </button>
+
+            <button
+              class="c-carousel__thumb"
+              data-carousel-index="1"
+              style="background-image:url(https://i.pinimg.com/originals/70/c3/f1/70c3f1f50a2aa3063fe9c4df0a248358.jpg)">
+            </button>
+
+            <button
+              class="c-carousel__thumb"
+              data-carousel-index="2"
+              style="background-image:url(https://i.pinimg.com/originals/92/a7/68/92a76833490c480b72674024b78d563d.jpg)">
+            </button>
+
+            <button
+              class="c-carousel__thumb js-thumb"
+              data-carousel-index="3"
+              style="background-image:url(https://pixfeeds.com/images/14/393485/1200-57958830-redhead-girl-with-brown-lipstick.jpg)">
+            </button>
+          </div>
+        </article>
     </body>
 
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script src="js/index.js"></script>
 </html>
